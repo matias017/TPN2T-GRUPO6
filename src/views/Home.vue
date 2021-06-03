@@ -3,7 +3,9 @@
    
     <img alt="Vue logo" src="../assets/logo1.svg" />
 
-    <router-link :to="{ name: 'MisPracticas' }">ir a mis Practicas</router-link>
+   
+       <!-- <router-link :to="{ name: 'MisPracticas' }">ir a mis Practicas</router-link>  -->
+
     <carousel />
     <MisPracticas/>
   </div>
