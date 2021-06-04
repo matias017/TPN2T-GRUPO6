@@ -5,6 +5,7 @@
         <b-nav-item to="/" exact exact-active-class="active">Home</b-nav-item>
         <b-nav-item :to="{ name: 'About' }" exact exact-active-class="active">About</b-nav-item>
         <b-nav-item :to="{ name: 'Login' }" exact exact-active-class="active">Login</b-nav-item>
+        <b-nav-item :to="{ name: 'Registrarse' }" exact exact-active-class="active">Registrarse</b-nav-item>
         <b-nav-item :to="{ name: 'MisPracticas' }" exact exact-active-class="active">Mis Practicas</b-nav-item>
         <b-nav-item :to="{ name: 'LasMasPracticadas' }" exact exact-active-class="active">Favoritas</b-nav-item>
       </b-nav>

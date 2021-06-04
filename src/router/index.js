@@ -5,7 +5,7 @@ import About from "../views/About.vue";
 import Login from "../components/Login.vue";
 import MisPracticas from "../components/MisPracticas.vue";
 import LasMasPracticadas from "../components/LasMasPracticadas.vue";
-
+import Registrarse from "../components/Registrarse.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -28,6 +28,11 @@ const routes = [
     path: "/Login",
     name: "Login",
     component: Login,
+  },
+  {
+    path: "/Registrarse",
+    name: "Registrarse",
+    component: Registrarse,
   },
   {
     path: "/Login",
