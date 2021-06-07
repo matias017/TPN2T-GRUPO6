@@ -1,7 +1,7 @@
 let joi = require('joi');
 import express from 'express';
 let router = express.Router();
-import dataCancion from '../componente/cancionn.js';
+import dataCancion from '../componente/cancion.js';
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
