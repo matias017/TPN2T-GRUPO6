@@ -6,10 +6,11 @@
         <b-nav-item :to="{ name: 'About' }" exact exact-active-class="active">About</b-nav-item>
         <b-nav-item :to="{ name: 'Login' }" exact exact-active-class="active">Login</b-nav-item>
         <b-nav-item :to="{ name: 'Registrarse' }" exact exact-active-class="active">Registrarse</b-nav-item>
+        <b-nav-item :to="{ name: 'MenuUsuario' }" exact exact-active-class="active">MenuUsuario</b-nav-item>
         <b-nav-item :to="{ name: 'MisPracticas' }" exact exact-active-class="active">Mis Practicas</b-nav-item>
         <b-nav-item :to="{ name: 'LasMasPracticadas' }" exact exact-active-class="active">Favoritas</b-nav-item>
       </b-nav>
-      <!-- Child route gets rendered in <router-view> or <nuxt-child> -->
+ 
         
       <router-view></router-view>
         </b-container>
