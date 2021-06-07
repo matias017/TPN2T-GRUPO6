@@ -2,10 +2,14 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import About from "../views/About.vue";
-import Login from "../components/Login.vue";
+import Login from "../components/Login.vue"
+import MenuUsuario from "../components/MenuUsuario.vue";
 import MisPracticas from "../components/MisPracticas.vue";
 import LasMasPracticadas from "../components/LasMasPracticadas.vue";
 import Registrarse from "../components/Registrarse.vue";
+import Cancion from "../components/Cancion.js";
+
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -13,6 +17,11 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
+  },
+  {
+    path: "/MenuUsuario",
+   name: "MenuUsuario",
+    component: MenuUsuario,
   },
   {
     path: "/about",
@@ -43,6 +52,11 @@ const routes = [
     path: "/MisPracticas",
     name: "MisPracticas",
     component: MisPracticas,
+  },
+  {
+    path: "/Cancion",
+    name: "cancion",
+    component: Cancion,
   },
   {
     path: "/LasMasPracticadas",
