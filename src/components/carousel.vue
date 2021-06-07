@@ -21,7 +21,8 @@
         <template #img>
           <img
             class="d-block img-fluid w-100"
-           
+            width="512px"
+            height="240"
             src="../assets/piano.jpg"
             alt="image slot"
           />
