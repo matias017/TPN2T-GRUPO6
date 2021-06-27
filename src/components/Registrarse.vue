@@ -3,22 +3,7 @@
 <div>
   <form>
        <h1>Registrate Aqui</h1>
-    <div>
-    <b-row>
-      <b-col md="6">
-       <b-form-input type="text" placeholder="Ingrese su nombre" v-model="nombre" :state="comprobar"></b-form-input>
-        <small>Minimo 3 carateres</small>
-      </b-col>
-    </b-row>
-    </div>
-    <div>
-     <b-row>
-      <b-col md="6">
-       <b-form-input type="text" placeholder="Ingrese su apellido" v-model="apellido" :state="comprobar"></b-form-input>
-        <small>Minimo 3 carateres</small>
-      </b-col>
-    </b-row>
-    </div>
+    
     <div>
     <b-row>
       <b-col md="6">

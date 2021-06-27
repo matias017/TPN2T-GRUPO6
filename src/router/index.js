@@ -8,6 +8,8 @@ import MisPracticas from "../components/MisPracticas.vue";
 import LasMasPracticadas from "../components/LasMasPracticadas.vue";
 import Registrarse from "../components/Registrarse.vue";
 import Cancion from "../components/Cancion.js";
+import usuario from "../components/Usuario.json";
+import Usuario from "../components/Usuario.js";
 
 
 Vue.use(VueRouter);
@@ -20,8 +22,14 @@ const routes = [
   },
   {
     path: "/MenuUsuario",
+    name: "MenuUsuario",
+    component: MenuUsuario,
+  },
+  {
+    path: "/MenuUsuario/:nombreUsuario",
    name: "MenuUsuario",
     component: MenuUsuario,
+    props:true
   },
   {
     path: "/about",
@@ -44,9 +52,14 @@ const routes = [
     component: Registrarse,
   },
   {
-    path: "/Login",
-    name: "Login",
-    component: Login,
+  path: "/Usuario",
+  name: "usuario",
+  component: usuario,
+},
+  {
+    path: "/Usuario",
+    name: "Usuario",
+    component: Usuario,
   },
   {
     path: "/MisPracticas",
@@ -55,7 +68,7 @@ const routes = [
   },
   {
     path: "/Cancion",
-    name: "cancion",
+    name: "Cancion",
     component: Cancion,
   },
   {

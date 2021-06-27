@@ -11,7 +11,7 @@ router.get('/:id', async (req,res)=>{
   if(cancion){
       res.json(cancion);
   } else {
-      res.status(404).send('Usuario no encontrado');
+      res.status(404).send('Cancion no encontrado');
   }
 });
 
@@ -24,7 +24,7 @@ router.post('/', async (req, res)=>{
       dificultad: joi.number().min(1).max(5).required(),
       tiempo :joi.number().min(1).max(9999999).required(),
       porcentaje: joi.number().min(0).max(100).required(),
-      imagen : joi.image().allowTypes(['png', 'jpg']),
+      imagen : joi.image().allowTypes([ 'key.0.cache']),
       popularidad: joi.number().min(1).max(5).required()
 
   });
