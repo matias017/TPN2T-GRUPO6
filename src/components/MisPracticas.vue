@@ -1,52 +1,55 @@
-
 <template>
-  
- <div>  
-     <b-container  class="p-4 bg-dark">
-  <b-card-group deck>
-    <b-card title="Title1" img-src="https://picsum.photos/300/300/?image=41" img-alt="Image" img-top>
-      <b-card-text>
-        This is a wider card with supporting text below as a natural lead-in to additional content.
-        This content is a little bit longer.
-      </b-card-text>
-      <template #footer>
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </template>
-    </b-card>
-
-    <b-card title="Title2" img-src="https://picsum.photos/300/300/?image=41" img-alt="Image" img-top>
-      <b-card-text>
-        This card has supporting text below as a natural lead-in to additional content.
-      </b-card-text>
-      <template #footer>
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </template>
-    </b-card>
-
-    <b-card title="Title3" img-src="https://picsum.photos/300/300/?image=41" img-alt="Image" img-top>
-      <b-card-text>
-        This is a wider card with supporting text below as a natural lead-in to additional content.
-        This card has even longer content than the first to show that equal height action.
-      </b-card-text>
-      <template #footer>
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </template>
-    </b-card>
-  </b-card-group>
-  </b-container>
-</div>
-         
+  <div>
+    
+    <Titulo texto="Cancionero" />
+      <div  v-for="(item, index) in arrayCancionero" :key="index">
+        {{ item.name }}
+        <b-button :to="'/Reproductor/' + `${item.id}`" variant="primary"
+          >ir</b-button
+        >
+        <the>
      
+    </div>
+    <Footer />
+  </div>
 </template>
 
 <script>
+import Titulo from "../components/Titulo.vue";
+import axios from "axios";
+import Footer from "./Footer.vue";
 export default {
   name: "MisPracticas",
-  components: { 
+  components: {
+    Titulo,
+    Footer,
+  },
+  props: {},
 
-   },
-    props: {
-    msg: String,
+  data() {
+    return {
+      arrayCancionero: [],
+    };
+  },
+  methods: {
+    async consumirApi() {
+      try {
+        const res = await axios.get(
+          "https://60c654e819aa1e001769f232.mockapi.io/optimus/canciones"
+        );
+        const data = await res.data;
+
+        this.arrayCancionero = data;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+  },
+  agregarCancion() {
+    this.name;
+  },
+  created() {
+    this.consumirApi();
   },
 };
 </script>
